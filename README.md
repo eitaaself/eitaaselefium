@@ -4,6 +4,6 @@ An Eitaa SelfBot By Selenium &amp; Webdriver
 
 **Setup**
 ```python
-  import core 
-  bot = core.Bot(False,True)
+  import main 
+  bot = main.Bot(headless = False, autologin= True, Browser="2") # Chrome Driver Is Default
 ```
