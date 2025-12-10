@@ -25,7 +25,7 @@ import json
 CoInitialize()
 
 class Bot:
-    def __init__(self, headless: bool, autologin: bool, Browser: str = "2"): # همه کروم رو دارن 
+    def __init__(self, headless: bool, autologin: bool, Browser: str): # همه کروم رو دارن 
         options = webdriver.FirefoxOptions()
         if headless:
             options.add_argument('--headless') 
@@ -38,6 +38,8 @@ class Bot:
         if str(Browser) == "1":
             self.driver = webdriver.Firefox(options=options)
         elif str(Browser) == "2":
+            self.driver = webdriver.Chrome(options=options)
+        else:
             self.driver = webdriver.Chrome(options=options)
 
         try:
